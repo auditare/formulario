@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción Webinar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <div class="container-fluid p-5" style="background-color: navy; color: white;">
+        <h1 class="text-center">Formulario de inscripción webinar ChatGPT para optimizar tareas a contadores y auditores</h1>
+    </div>
+
+    <!-- Cuerpo del Formulario -->
+    <div class="container mt-5" style="background-color: white; padding: 20px;">
+        <form action="submit_form.php" method="post" enctype="multipart/form-data">
+
+            <!-- Nombre completo -->
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+
+            <!-- Correo electrónico -->
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" name="correo" required>
+            </div>
+
+            <!-- Número de WhatsApp -->
+            <div class="mb-3">
+                <label for="whatsapp" class="form-label">Número de WhatsApp</label>
+                <input type="text" class="form-control" id="whatsapp" name="whatsapp" required>
+            </div>
+
+            <!-- ¿Eres contador o auditor? -->
+            <div class="mb-3">
+                <label for="rol" class="form-label">¿Eres contador o auditor?</label>
+                <select class="form-select" id="rol" name="rol" required>
+                    <option value="contador">Contador</option>
+                    <option value="auditor">Auditor</option>
+                </select>
+            </div>
+
+            <!-- Anexar documento de pago -->
+            <div class="mb-3">
+                <label for="documento_pago" class="form-label">Anexar documento de pago</label>
+                <input type="file" class="form-control" id="documento_pago" name="documento_pago" required>
+            </div>
+
+            <!-- Espacio y botón de enviar -->
+            <br><br>
+            <button type="submit" class="btn btn-primary">Enviar datos</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
